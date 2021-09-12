@@ -15,7 +15,7 @@ Software list:
 * Web Browser: **Firefox** (https://www.mozilla.org/en-US/firefox/new/)
 * Other utils to be installed:
   - nmtui (TUI Network Manager)
-  - xbacklight (Brightness)
+  - brightnessctl (Brightness): need proper permission set with `usermod -a -G video <user>` and `usermod -a -G input <user>`
   - acpi & acpid (Battery management)
   - pulseaudio (Audio management)
   - grub-customizer (Grub theme manager)

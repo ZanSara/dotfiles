@@ -1,0 +1,7 @@
+/** Basic config file **/
+
+configuration {
+  show-icons:         true;
+  icon-theme:         "Qogir";
+}
+@import "/home/sara/.config/rofi/themes/DarkBlack.rasi"

@@ -1,0 +1,19 @@
+@theme "/themes/appsmenu"
+
+mainbox {
+	margin: 40% 40%;
+	children: [ message, listview ];
+}
+
+listview {
+	columns: 5;
+}
+
+element-icon {
+	size: 0;
+}
+
+element-text {
+	margin: 0 0 0 0;
+	font: "Monospace 12";
+}

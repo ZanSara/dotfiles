@@ -13,3 +13,8 @@ Software list:
 * Shell: **bash**, themed (https://ohmybash.nntoan.com/) with customized "font" theme
 * File manager: **ranger** (https://wiki.archlinux.org/title/Ranger)
 * Web Browser: **Firefox** (https://www.mozilla.org/en-US/firefox/new/)
+* Other utils to be installed:
+  - nmtui (TUI Network Manager)
+  - xbacklight (Brightness)
+  - acpi & acpid (Battery management)
+  - pulseaudio (Audio management)

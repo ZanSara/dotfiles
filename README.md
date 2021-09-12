@@ -18,3 +18,4 @@ Software list:
   - xbacklight (Brightness)
   - acpi & acpid (Battery management)
   - pulseaudio (Audio management)
+  - grub-customizer (Grub theme manager)

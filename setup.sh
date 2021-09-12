@@ -5,6 +5,7 @@ git submodule update --init  --recursive
 rm -r ~/.config
 rm -r ~/.local/share/fonts
 rm -r ~/.oh-my-bash
+rm -r ~/.osh-themes
 
 mv ~/.bashrc ~/.bashrc-backup
 rm ~/.gitconfig
@@ -25,6 +26,7 @@ ln -s ~/projects/dotfiles/.gitmodules .
 ln -s ~/projects/dotfiles/.gtkrc-2.0 .
 ln -s ~/projects/dotfiles/.gtkrc-xfce .
 ln -s ~/projects/dotfiles/.oh-my-bash .
+ln -s ~/projects/dotfiles/.osh-themes .
 ln -s ~/projects/dotfiles/.osh-update .
 ln -s ~/projects/dotfiles/.profile .
 ln -s ~/projects/dotfiles/.xinitrc .

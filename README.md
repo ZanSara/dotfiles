@@ -17,7 +17,8 @@ Software list:
 * Web Browser: **Firefox** (https://www.mozilla.org/en-US/firefox/new/)
 * Other utils to be installed:
   - nmtui (TUI Network Manager)
-  - brightnessctl (Brightness)
+  - brightnessctl (Brightness): need proper permission set with `usermod -a -G video <user>` and `usermod -a -G input <user>`
   - acpi & acpid (Battery management)
   - pulseaudio (Audio management)
   - grub-customizer (Grub theme manager)
+  - Noto Sans CJK JP for the workspace numbering (https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip)

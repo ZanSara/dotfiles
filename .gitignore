@@ -1,0 +1,6 @@
+.config/Thunar/*
+.config/dconf/*
+.config/Slack/*
+.config/libreoffice/*
+.config/pulse/*
+**/__pycache__/*

@@ -49,8 +49,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 
- xset +fp /home/sara/.local/share/fonts
- xset fp rehash
+xset +fp /home/sara/.local/share/fonts
+xset fp rehash
+
+xautolock -time 10 -notify 5 -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -locker xsecurelock
 
 exec i3
 

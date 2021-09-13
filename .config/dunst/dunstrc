@@ -6,7 +6,8 @@
 
     monitor =                       0
     follow =                        mouse
-    geometry =                      "400x5-25-25"
+#    geometry =                      "400x5-25-25"
+    geometry =                      "0x400+10+40"
     indicate_hidden =               yes
     shrink =                        no
     transparency =                  0
@@ -25,9 +26,9 @@
 #--------------------------
 
     font =                          Droid Mono 10
-    line_height =                   17
+    line_height =                   12
     markup =                        full
-    format =                        "<span font_desc='Droid Mono 12' foreground='#ffffff'>%s</span>\n%b"
+    format =                        "<span font_desc='Droid Mono 12' foreground='#ffffff'>%s</span>%b"
     alignment = center
     vertical_alignment =            center
     show_age_threshold =            60
@@ -92,21 +93,21 @@
     #    context =                   ctrl+shift+period
 
     [urgency_low]
-        background = "#000000"
+        background = "#444444"
         foreground = "#888888"
         highlight =                 "#333333"
         timeout =                   8
         icon = $HOME/.config/dunst/normal.png
 
     [urgency_normal]
-        background = "#000000"
+        background = "#444444"
         foreground = "#ffffff"
         highlight =                 "#777777"
         timeout =                   8
         icon = $HOME/.config/dunst/normal.png
 
     [urgency_critical]
-        background = "#000000"
+        background = "#444444"
         foreground = "#ff0000"
         highlight =                 "#ffff00"
         timeout =                   20

@@ -150,7 +150,11 @@ export EDITOR="nano"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# GTK dark theme
 export GTK_THEME=Adwaita:dark
+
+# Default terminal
 export TERMINAL=kitty
 
-
+# Disable terminal bell
+bind 'set bell-style none'

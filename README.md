@@ -7,6 +7,8 @@ Software list:
 * Launcher: **rofi** (https://github.com/davatorium/rofi)
 * Notification Manager: **dunst** (https://github.com/dunst-project/dunst)
 * Display manager: **ly** (https://github.com/nullgemm/ly)
+* Screen lock: **xsecurelock** (https://github.com/google/xsecurelock) with xautolock (https://linux.die.net/man/1/xautolock)
+* Screensaver: **xscreensaver** (https://wiki.archlinux.org/title/XScreenSaver)
 * Boot manager: **grub**, themed (https://www.gnu.org/software/grub/)
 * Font: **Terminus** (Original: http://terminus-font.sourceforge.net/, TTF: https://files.ax86.net/terminus-ttf/)
 * Terminal: **Kitty** (https://sw.kovidgoyal.net/kitty/)
@@ -15,7 +17,7 @@ Software list:
 * Web Browser: **Firefox** (https://www.mozilla.org/en-US/firefox/new/)
 * Other utils to be installed:
   - nmtui (TUI Network Manager)
-  - xbacklight (Brightness)
+  - brightnessctl (Brightness)
   - acpi & acpid (Battery management)
   - pulseaudio (Audio management)
   - grub-customizer (Grub theme manager)

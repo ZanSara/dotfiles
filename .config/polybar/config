@@ -43,7 +43,7 @@ font-3 = Font Awesome 5 Free:style=Regular:pixelsize=12;1
 font-4 = Font Awesome 5 Free:style=Solid:pixelsize=12;1
 font-5 = Font Awesome 5 Brands:pixelsize=12;1
 font-2 = sm4tik:pixelsize=11;1
-font-6 = Noto Sans CJK JP:size=10:antialias=true;0
+font-6 = Noto Sans CJK JP:style=Bold:size=10:antialias=true;0
 
 wm-restack = i3
 
@@ -55,14 +55,14 @@ width = 100%
 background = ${colors.no-bg}
 foreground = ${colors.white}
 
-modules-left = date i3
-modules-center = xwindow
-modules-right = battery separator backlight separator pulseaudio separator wlan
+modules-left = date wlan separator battery
+modules-center = i3
+modules-right = cpu separator memory separator backlight separator pulseaudio
 
 [module/xwindow]
 type = internal/xwindow
 label = [ %title:0:30:...% ]
-label-foreground = ${colors.white}
+label-foreground = #bbbbff
 
 [module/i3]
 type = internal/i3
@@ -72,13 +72,13 @@ enable-scroll = true
 strip-wsnumbers = true
 label-mode-padding = 1
 
-label-focused-foreground = ${colors.white}
+label-focused-foreground = #8888ff
 label-focused-padding = 1
 
-label-unfocused-foreground = ${colors.black-alt}
+label-unfocused-foreground = #bbbbff
 label-unfocused-padding = 1
 
-label-urgent-foreground = ${colors.red}
+label-urgent-foreground = #ff0000
 label-urgent-padding = 1
 
 ws-icon-0 = 1;一
@@ -106,9 +106,23 @@ label = "%percentage%%"
 [module/cpu]
 type = internal/cpu
 interval = 2
+
+format = <label> <ramp-coreload>
+
 format-prefix = " CPU:  "
 format-prefix-foreground = ${colors.black-alt}
 label = %{A1:i3-sensible-terminal htop:}%percentage%%%{A}
+
+ramp-coreload-spacing = 0
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+ramp-coreload-foreground = ${colors.black-alt}
 
 [module/memory]
 type = internal/memory
@@ -130,7 +144,7 @@ label-connected = "%{A1:kitty nmtui:}%essid% %{F#a19c9f}(%signal%%)%{A}"
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = "WIFI: "
 format-disconnected-prefix-foreground = ${colors.black-alt}
-label-disconnected = "%{A1:i3-sensible-terminal nmtui:}n/a%{A}"
+label-disconnected = "%{A1:i3-sensible-terminal nmtui:}%{F#ff9999}n/a%{A}"
 
 [module/eth]
 type = internal/network
@@ -151,13 +165,10 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 1
-
 date = "%d %h %Y"
-
 time = "%H:%M"
-
 label = "%time%     %date%    " 
-label-foreground = ${colors.black-alt}
+label-foreground = #ffffbb
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -176,21 +187,38 @@ label-volume = "%percentage%%"
 type = internal/battery
 battery = BAT0
 adapter = ACAD
-full-at = 99
+#full-at = 99
+low-at = 15
+time-format = %H:%M
 
-label-charging = "+%percentage%%"
-label-discharging = "-%percentage%%"
-label-full = "Full"
+format-charging = <ramp-capacity> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+label-charging = " %percentage%% ↑ %{F#a19c9f}(%time%)"
+label-discharging = " %percentage%% ↓ %{F#a19c9f}(%time%)"
+
 format-charging-prefix = "BAT:  "
 format-charging-prefix-foreground = ${colors.black-alt}
+
 format-discharging-prefix = "BAT:  "
 format-discharging-prefix-foreground = ${colors.black-alt}
-format-full-prefix = "BAT:  "
-format-full-prefix-foreground = ${colors.black-alt}
 
-format-charging = <label-charging>
-format-discharging = <label-discharging>
-format-full = <label-full>
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = ▁
+ramp-capacity-0-foreground = #ff0000
+ramp-capacity-1 = ▂
+ramp-capacity-1-foreground = #ff8888
+ramp-capacity-2 = ▃
+ramp-capacity-2-foreground = #ffff88
+ramp-capacity-3 = ▄
+ramp-capacity-3-foreground = #ffff88
+ramp-capacity-4 = ▅
+ramp-capacity-4-foreground = #ffff88
+ramp-capacity-5 = ▆
+ramp-capacity-5-foreground = #bbffbb
+ramp-capacity-6 = ▇
+ramp-capacity-6-foreground = #88ff88
+
 
 [module/rofimenu]
 type = custom/text
@@ -216,7 +244,7 @@ click-left = exec $HOME/.config/rofi/bin/sysmenu
 
 [module/separator]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T}%{T-}"
 content-foreground = ${colors.black-alt}
 content-padding = 3
 

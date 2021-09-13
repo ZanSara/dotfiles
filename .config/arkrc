@@ -1,15 +1,21 @@
 [ExtractDialog]
-DirHistory[$e]=$HOME/software/
+DirHistory[$e]=$HOME/software/noto sans cjk/,$HOME/software/
 
 [KFileDialog Settings]
-Recent Files[$e]=file:$HOME,file:$HOME
-Recent URLs[$e]=file:$HOME/software/
+Recent Files[$e]=file:$HOME
+Recent URLs[$e]=file:$HOME/software/,file:$HOME/software/noto sans cjk/,file:$HOME/,file:///tmp/,file:///
 detailViewIconSize=16
 
 [MainWindow]
-State=AAAA/wAAAAD9AAAAAAAAAoAAAAGlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAA6UAAAO+AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 StatusBar=Disabled
 ToolBarsMovable=Disabled
-eDP XPosition 1920x1080=640
-eDP YPosition 1920x1080=324
-splitterSizes=424,212
+eDP Height 1920x1080=1008
+eDP Width 1920x1080=933
+eDP XPosition 1920x1080=966
+eDP YPosition 1920x1080=51
+splitterSizes=619,310
+
+[Recent Files]
+File1[$e]=$HOME/downloads/slack-desktop-4.19.2-amd64.deb
+Name1[$e]=slack-desktop-4.19.2-amd64.deb

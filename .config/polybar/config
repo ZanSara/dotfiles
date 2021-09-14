@@ -57,7 +57,7 @@ foreground = ${colors.white}
 
 modules-left = date wlan separator battery
 modules-center = i3
-modules-right = cpu separator memory separator backlight separator pulseaudio
+modules-right = cpu temperature separator memory separator backlight separator pulseaudio
 
 [module/xwindow]
 type = internal/xwindow
@@ -144,7 +144,7 @@ label-connected = "%{A1:kitty nmtui:}%essid% %{F#a19c9f}(%signal%%)%{A}"
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = "WIFI: "
 format-disconnected-prefix-foreground = ${colors.black-alt}
-label-disconnected = "%{A1:i3-sensible-terminal nmtui:}%{F#ff9999}n/a%{A}"
+label-disconnected = "%{A1:kitty nmtui:}%{F#ff9999}n/a%{A}"
 
 [module/eth]
 type = internal/network
@@ -165,10 +165,10 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 1
-date = "%d %h %Y"
+date = "%d/%m/%Y"
 time = "%H:%M"
-label = "%time%     %date%    " 
-label-foreground = #ffffbb
+label = "%time%  %date%    " 
+label-foreground = #ffff88
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -188,22 +188,21 @@ type = internal/battery
 battery = BAT0
 adapter = ACAD
 #full-at = 99
-low-at = 15
+#low-at = 15
 time-format = %H:%M
 
-format-charging = <ramp-capacity> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
+label-full = "%{F#ffffff}%percentage%%%{F-}"
+label-charging = "%{F#ffffff}%percentage%% ↑ %{F-}(%time%)"
+label-discharging = "%{F#ffffff}%percentage%% ↓ %{F-}(%time%)"
 
-label-charging = " %percentage%% ↑ %{F#a19c9f}(%time%)"
-label-discharging = " %percentage%% ↓ %{F#a19c9f}(%time%)"
+format-full = "BAT:  <ramp-capacity> <label-full>"
+format-charging = "BAT:  <ramp-capacity> <label-charging>"
+format-discharging = "BAT:  <ramp-capacity> <label-discharging>"
 
-format-charging-prefix = "BAT:  "
-format-charging-prefix-foreground = ${colors.black-alt}
+format-full-foreground = ${colors.black-alt}
+format-charging-foreground = ${colors.black-alt}
+format-discharging-foreground = ${colors.black-alt}
 
-format-discharging-prefix = "BAT:  "
-format-discharging-prefix-foreground = ${colors.black-alt}
-
-; Only applies if <ramp-capacity> is used
 ramp-capacity-0 = ▁
 ramp-capacity-0-foreground = #ff0000
 ramp-capacity-1 = ▂
@@ -219,28 +218,27 @@ ramp-capacity-5-foreground = #bbffbb
 ramp-capacity-6 = ▇
 ramp-capacity-6-foreground = #88ff88
 
+[module/temperature]
+type = internal/temperature
+interval = 3
+base-temperature = 20
+warn-temperature = 60
+units = true
 
-[module/rofimenu]
-type = custom/text
-content = " "
-content-foreground = ${colors.cyan}
-click-left = exec $HOME/.config/rofi/bin/launcher_misc
+format = <label> <ramp>
+format-warn = <label-warn> <ramp>
 
-[module/player]
-type = custom/script
-exec = ~/.config/polybar/scripts/player.sh
-format = <label>
-tail = true
-interval = 1
-click-left = playerctl previous &
-click-right = playerctl next &
-click-middle = playerctl play-pause &
+label = "%{A1:xsensors:}   %temperature-c% %{A}"
+label-warn = "%{A1:xsensors:}  %temperature-c% %{A}"
+label-warn-foreground = #f00
 
-[module/powermenu]
-type = custom/text
-content = ""
-content-foreground = ${colors.cyan}
-click-left = exec $HOME/.config/rofi/bin/sysmenu
+ramp-0 = ▁
+ramp-1 = ▂
+ramp-2 = ▃
+ramp-3 = ▄
+ramp-4 = ▅
+ramp-5 = ▆
+ramp-6 = ▇
 
 [module/separator]
 type = custom/text

@@ -158,3 +158,7 @@ export TERMINAL=kitty
 
 # Disable terminal bell
 bind 'set bell-style none'
+
+# Add work-related aliases in this file (not in version control)
+source ~/.private-aliases
+

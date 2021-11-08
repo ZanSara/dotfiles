@@ -1,0 +1,42 @@
+# general settings
+ title-text: ""
+ message-font: "Terminus (TTF) Bold 20"
+ message-color: "#555555"
+ desktop-color: "#000000"
+ terminal-font: "Terminus (TTF) Bold 20"
+
+
+# boot menu
++ boot_menu {
+    left = 16%
+    width = 50%
+    top = 20%
+    height = 35%	
+    item_font = "Terminus (TTF) Bold 20"
+    item_color = "#555555"
+    selected_item_font = "Terminus (TTF) Bold 20"
+    selected_item_color = "#ffffff"
+    icon_width = 16
+    icon_height = 16
+    item_height = 33
+    item_padding = 20
+    item_icon_space = 5
+    item_spacing = 5
+}
+
+# Show progress
++ progress_bar {
+  id = "__timeout__"
+  left = 0%
+  width = 100%
+  top = 90%
+  height = 31
+  #text = "%d seconds left"
+  #text_color = "#555555"
+  #font = "Terminus (TTF) Bold 20"
+  fg_color = "#888888"
+  bg_color = "#222222"
+  border_color = "#000000"
+}
+
+

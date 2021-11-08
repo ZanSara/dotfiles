@@ -52,6 +52,7 @@ bindsym $mod+d exec exec rofi -show drun
 bindsym $mod+b exec firefox
 bindsym $mod+e exec thunderbird
 bindsym $mod+f exec kitty ranger
+bindsym $mod+c exec code
 
 # change focus
 #bindsym $mod+j focus left
@@ -141,6 +142,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # open applications on specific workspaces
+assign [class="Slack"] $workspace10
 #assign [class="kitty"] $workspace1
 
 #assign [class="Chromium"] $workspace2
@@ -316,9 +318,9 @@ bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # screenshot
-bindsym Print exec scrot $HOME/documents/images/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym Mod1+Print exec scrot -u $HOME/documents/images/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym Mod1+Shift+Print exec scrot -s $HOME/documents/images/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym --release Print exec scrot $HOME/documents/images/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym --release Mod1+Print exec scrot -u $HOME/documents/images/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym --release Mod1+Shift+Print exec scrot -s $HOME/documents/images/`date +%Y-%m-%d_%H:%M:%S`.png
 
 # window style
 new_window pixel 1
@@ -338,24 +340,24 @@ gaps top 40
 bindsym $mod+Delete exec rofi -modi system:$HOME/.config/rofi/scripts/powermenu.sh -show system -theme themes/system-menu
 bindsym $mod+l exec xsecurelock
 
+# Autolock setup
+exec_always --no-startup-id xautolock -time 2 -notify 1 -bell 0% -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -locker xsecurelock
+
 # screensetup
 #exec_always --no-startup-id xrandr --output DisplayPort-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-0 --off --output DVI-1 --off
 
 # autostarted applications
-exec_always --no-startup-id wal -R -n
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-#exec --no-startup-id setbg	
-#exec --no-startup-id ~/.fehbg
-exec_always --no-startup-id picom --experimental-backends
-#exec --no-startup id picom -b
 #exec --no-startup-id .config/conky/start_conky
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l dim"
 exec --no-startup-id xset dpms 500
-#exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l dim"
-exec --no-startup-id dunstwal
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id mpd
+#exec --no-startup-id dunstwal
+exec_always --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+exec slack
 
 # Set keyboard layout
 exec_always --no-startup-id setxkbmap us
 
+# Disable the X bell
+exec xset b off
 

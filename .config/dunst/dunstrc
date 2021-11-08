@@ -1,122 +1,119 @@
 [global]
 
 #--------------------------
-#           Display
+#   Display
 #--------------------------
 
-    monitor =                       0
-    follow =                        mouse
-#    geometry =                      "400x5-25-25"
-    geometry =                      "0x400+10+40"
-    indicate_hidden =               yes
-    shrink =                        no
-    transparency =                  0
-    notification_height =           0
-    padding =                       25
-    horizontal_padding =            25
-    frame_width =                   2
-    frame_color = "#cccccc"
-    separator_height =              0
-    separator_color =               #cccccc
-    sort = yes
-    idle_threshold =                120
+monitor = 0
+follow =mouse
+#geometry = "400x5-25-25"
+geometry = "0x400+10+40"
+indicate_hidden = yes
+shrink = no
+transparency = 0
+notification_height = 0
+padding = 20
+horizontal_padding = 20
+frame_width = 2
+frame_color = "#cccccc"
+separator_height = 2
+separator_color = "#cccccc"
+sort = yes
+idle_threshold =120
 
 #--------------------------
-#           Text
+#   Text
 #--------------------------
 
-    font =                          Droid Mono 10
-    line_height =                   12
-    markup =                        full
-    format =                        "<span font_desc='Droid Mono 12' foreground='#ffffff'>%s</span>%b"
-    alignment = center
-    vertical_alignment =            center
-    show_age_threshold =            60
-    word_wrap =                     yes
+font = Droid Mono 10
+line_height = 12
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = left
+vertical_alignment = center
+show_age_threshold = 60
+word_wrap = yes
 
-    ignore_newline =                no
-    stack_duplicates =              true
-    hide_duplicate_count =          true
-    show_indicators =               no
-
-#--------------------------
-#           Icons
-#--------------------------
-    icon_position =                 left
-    min_icon_size =                 48
-    max_icon_size =                 96
-    icon_path =                    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/Adwaita/256x256/status/
-#--------------------------
-#           History
-#--------------------------
-
-    sticky_history =                yes
-    history_length =                20
-    
-#--------------------------
-#       Misc/Advanced 
-#--------------------------
-    dmenu =                         /usr/bin/dmenu -p dunst:
-    browser =                       firefox
-    always_run_script =             true
-    title =                         Dunst
-    class =                         Dunst
-
-    startup_notification =          false
-
-    verbosity =                     mesg
-
-    # Picom manage this
-    corner_radius =                 0
-
-    ignore_dbusclose =              false
-
-    ### Legacy
-
-    force_xinerama =                false
-
-    ### mouse
-    mouse_left_click =              close_current
-    mouse_right_click =             do_action, close_current
-    #mouse_middle_click =            close_all
+ignore_newline = no
+stack_duplicates = true
+hide_duplicate_count = true
+show_indicators =   no
 
 #--------------------------
-#    Additional sections 
+#   Icons
+#--------------------------
+icon_position = left
+min_icon_size = 48
+max_icon_size = 96
+icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/Adwaita/256x256/status/
+#--------------------------
+#   History
+#--------------------------
+
+sticky_history = yes
+history_length = 20
+
+#--------------------------
+#   Misc/Advanced 
+#--------------------------
+dmenu = /usr/bin/dmenu -p dunst:
+browser = firefox
+terminal = kitty
+always_run_script = true
+title = Dunst
+class = Dunst
+
+startup_notification = false
+verbosity = mesg
+
+# Picom manage this
+corner_radius = 0
+ignore_dbusclose =  false
+
+### Legacy
+force_xinerama =false
+
+### mouse
+mouse_left_click =  do_action, close_current
+mouse_right_click = close_current
+#mouse_middle_click = close_all
+
+#--------------------------
+#   Additional sections 
 #-------------------------- 
 
-    [experimental]
-        per_monitor_dpi =           false
+[experimental]
+per_monitor_dpi =   false
 
-    [shortcuts]
-    #    close =                     ctrl+space
-    #    close_all =                 ctrl+shift+space
-    #    context =                   ctrl+shift+period
+[shortcuts]
+#close = ctrl+space
+#close_all = ctrl+shift+space
+#context =   ctrl+shift+period
 
-    [urgency_low]
-        background = "#444444"
-        foreground = "#888888"
-        highlight =                 "#333333"
-        timeout =                   8
-        icon = $HOME/.config/dunst/normal.png
+[urgency_low]
+background ="#222222"
+foreground ="#888888"
+highlight = "#444444"
+timeout =   8
+icon =  $HOME/.config/dunst/normal.png
 
-    [urgency_normal]
-        background = "#444444"
-        foreground = "#ffffff"
-        highlight =                 "#777777"
-        timeout =                   8
-        icon = $HOME/.config/dunst/normal.png
+[urgency_normal]
+background ="#222222"
+foreground ="#ffffff"
+highlight = "#777777"
+timeout =   8
+icon =  $HOME/.config/dunst/normal.png
 
-    [urgency_critical]
-        background = "#444444"
-        foreground = "#ff0000"
-        highlight =                 "#ffff00"
-        timeout =                   20
-        icon = $HOME/.config/dunst/normal.png
+[urgency_critical]
+frame_color = "#ff0000"
+background = "#222222"
+foreground = "#ff0000"
+highlight = "#ffff00"
+timeout =   20
+icon =  $HOME/.config/dunst/normal.png
 
 # Modify spectacle screenshot notification to show only the summary
-    [Spectacle]
-        appname =                   Spectacle
-        format =                    "<span font_desc='Droid Mono 12' foreground='#ffffff'>%s</span>"
+#[Spectacle]
+#appname =   Spectacle
+#format ="<span font_desc='Droid Mono 12' foreground='#ffffff'>%s</span>"
 
-
-# vim: ft=cfg

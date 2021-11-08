@@ -51,6 +51,7 @@ wm-restack = i3
 locale = en_US.UTF-8
 inherit = constants/background
 width = 100%
+monitor = ${env:MONITOR:}
 
 background = ${colors.no-bg}
 foreground = ${colors.white}

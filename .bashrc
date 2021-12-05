@@ -156,9 +156,13 @@ export GTK_THEME=Adwaita:dark
 # Default terminal
 export TERMINAL=kitty
 
+# Make kitty work better over SSH
+alias ssh="kitty +kitten ssh"
+
 # Disable terminal bell
 bind 'set bell-style none'
 
 # Add work-related aliases in this file (not in version control)
 source ~/.private-aliases
+
 

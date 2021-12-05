@@ -2,7 +2,7 @@
 Allow Expansion=false
 Automatically select filename extension=true
 Breadcrumb Navigation=true
-Decoration position=2
+Decoration position=0
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
 Show Bookmarks=false
@@ -15,4 +15,4 @@ Sort by=Name
 Sort directories first=true
 Sort reversed=false
 Speedbar Width=144
-View Style=DetailTree
+View Style=Detail

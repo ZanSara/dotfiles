@@ -22,3 +22,8 @@ Software list:
   - pulseaudio (Audio management)
   - grub-customizer (Grub theme manager)
   - Noto Sans CJK JP for the workspace numbering (https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip)
+  - [DarkReader](https://addons.mozilla.org/en-US/firefox/addon/darkreader) for Firefox
+
+Notes: 
+- Autostarts Slack on screen 10
+- Mirrors the status bar on every connected display

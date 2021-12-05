@@ -1,5 +1,6 @@
 .gitconfig
 .config/Thunar/
+.config/caja/
 .config/Code/
 .config/dconf/
 .config/Slack/
@@ -17,6 +18,8 @@
 .config/nextjs-nodejs/
 .config/vlc/
 .config/gedit/accels
+.config/Android Open Source Project
+.config/Google
 
 **/zoom.conf
 **/zoomus.conf

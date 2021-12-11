@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=slimbookbattery
+Exec=python3 /usr/share/slimbookbattery/src/slimbookbatteryindicator.py
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true

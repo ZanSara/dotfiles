@@ -77,9 +77,9 @@ TLP_PERSISTENT_DEFAULT=0
 #   you should know what you're doing!
 # Default: <none>
 
-CPU_SCALING_GOVERNOR_ON_AC=performance
+CPU_SCALING_GOVERNOR_ON_AC=
+CPU_SCALING_GOVERNOR_ON_BAT=
 #slimbook
-CPU_SCALING_GOVERNOR_ON_BAT=powersave
 
 # Set the min/max frequency available for the scaling governor.
 # Possible values depend on your CPU. For available frequencies see
@@ -339,7 +339,8 @@ RUNTIME_PM_ON_BAT=auto
 # (separate with spaces). Use lspci to get the adresses (1st column).
 # Default: <none>
 
-#RUNTIME_PM_BLACKLIST="bb:dd.f 11:22.3 44:55.6"
+RUNTIME_PM_BLACKLIST="bb:dd.f 11:22.3 44:55.6 02:00.0"
+#slimbook
 
 # Exclude PCI(e) devices assigned to the listed drivers from Runtime PM.
 # Default when unconfigured is "amdgpu nouveau nvidia radeon" which
@@ -362,7 +363,7 @@ USB_AUTOSUSPEND=0
 # Note: input devices (usbhid) are excluded automatically
 # Default: <none>
 
-USB_BLACKLIST=""
+USB_BLACKLIST="0bda:0411 0bda:8153"
 #slimbook
 
 # Bluetooth devices are excluded from USB autosuspend:

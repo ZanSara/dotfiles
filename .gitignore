@@ -20,6 +20,9 @@
 .config/gedit/accels
 .config/Android Open Source Project
 .config/Google
+.config/LosslessCut
+.config/arkrc
+.config/mimeapps.list
 
 **/zoom.conf
 **/zoomus.conf

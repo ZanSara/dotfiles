@@ -22,6 +22,7 @@
   - acpi & acpid (Battery management)
   - pulseaudio (Audio management)
   - grub-customizer (Grub theme manager)
+  - tiv (image preview in terminal): https://github.com/stefanhaustein/TerminalImageViewer
   - Noto Sans CJK JP for the workspace numbering (https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip)
   - [DarkReader](https://addons.mozilla.org/en-US/firefox/addon/darkreader) for Firefox
 

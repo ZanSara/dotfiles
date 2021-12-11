@@ -1,7 +1,6 @@
 # Dotfiles
 
-Software list:
-
+* OS: Xubuntu
 * WM: **i3-gaps** (https://github.com/Airblader/i3)
 * Bar: **polybar** (https://github.com/polybar/polybar)
 * Launcher: **rofi** (https://github.com/davatorium/rofi)

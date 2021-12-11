@@ -1,5 +1,7 @@
 # Dotfiles
 
+![Screenshot](https://github.com/ZanSara/dotfiles/blob/main/screenshot/screenshot.png?raw=true)
+
 * OS: Xubuntu
 * WM: **i3-gaps** (https://github.com/Airblader/i3)
 * Bar: **polybar** (https://github.com/polybar/polybar)

@@ -159,6 +159,10 @@ export TERMINAL=kitty
 # Make kitty work better over SSH
 alias ssh="kitty +kitten ssh"
 
+# Double monitor config
+alias setup-double-monitors="xrandr --output DisplayPort-1 --primary --mode 2560x1440 --rate 60.00 --output eDP --mode 1920x1080 --rate 60.00 --right-of DisplayPort-1"
+alias setup-tv="xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 60.00 --output eDP --mode 1920x1080 --rate 60.00 --right-of HDMI-A-0"
+
 # Disable terminal bell
 bind 'set bell-style none'
 

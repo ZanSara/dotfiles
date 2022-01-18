@@ -50,8 +50,8 @@ bindsym $mod+d exec exec rofi -show drun
 
 # quickstart applications
 bindsym $mod+b exec firefox
-bindsym $mod+e exec thunderbird
-bindsym $mod+f exec kitty ranger
+#bindsym $mod+e exec thunderbird
+bindsym $mod+f exec caja
 bindsym $mod+c exec code
 
 # change focus
@@ -341,7 +341,10 @@ bindsym $mod+Delete exec rofi -modi system:$HOME/.config/rofi/scripts/powermenu.
 bindsym $mod+l exec xsecurelock
 
 # Autolock setup
-exec_always --no-startup-id xautolock -time 2 -notify 1 -bell 0% -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -locker xsecurelock
+#exec_always --no-startup-id xautolock -time 2 -notify 1 -bell 0% -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -locker xsecurelock
+exec xset s 300 30
+exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
+
 
 # screensetup
 #exec_always --no-startup-id xrandr --output DisplayPort-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-0 --off --output DVI-1 --off
@@ -354,6 +357,12 @@ exec --no-startup-id xset dpms 500
 #exec --no-startup-id dunstwal
 exec_always --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec slack
+exec firefox
+
+
+# Start double-monitor display
+exec setup-double-monitors
+
 
 # Set keyboard layout
 exec_always --no-startup-id setxkbmap us

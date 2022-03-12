@@ -57,7 +57,7 @@ fi
 
 
 # Path to your oh-my-bash installation.
-export OSH=/home/sara/.oh-my-bash
+export OSH=/home/s/.oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
@@ -165,8 +165,4 @@ alias setup-tv="xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 60.00
 
 # Disable terminal bell
 bind 'set bell-style none'
-
-# Add work-related aliases in this file (not in version control)
-source ~/.private-aliases
-
 

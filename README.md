@@ -26,7 +26,7 @@
   - Noto Sans CJK JP for the workspace numbering (https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip)
   - [DarkReader](https://addons.mozilla.org/en-US/firefox/addon/darkreader) for Firefox
 
-Other packages needed: `sudo apt install git curl network-manager xsensors pulseaudio net-tools`
+Other packages needed: `sudo apt install git curl network-manager xsensors pulseaudio net-tools xscreensaver-data-extra`
 
 Notes: 
 - Autostarts Slack on screen 10

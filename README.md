@@ -17,7 +17,7 @@
 * File manager: **ranger** (https://wiki.archlinux.org/title/Ranger)
 * Web Browser: **Firefox** (https://www.mozilla.org/en-US/firefox/new/)
 * Other utils to be installed:
-  - nmtui (TUI Network Manager): comes with `network-manager` in Ubuntu.
+  - nmtui (TUI Network Manager): comes with `network-manager` in Ubuntu
   - brightnessctl (Brightness): need proper permission set with `usermod -a -G video <user>` and `usermod -a -G input <user>`
   - acpi & acpid (Battery management)
   - pulseaudio (Audio management)
@@ -25,6 +25,8 @@
   - tiv (image preview in terminal): https://github.com/stefanhaustein/TerminalImageViewer: `sudo snap install --edge tiv`
   - Noto Sans CJK JP for the workspace numbering (https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip)
   - [DarkReader](https://addons.mozilla.org/en-US/firefox/addon/darkreader) for Firefox
+
+Other packages needed: `sudo apt install git curl network-manager xsensors pulseaudio net-tools`
 
 Notes: 
 - Autostarts Slack on screen 10

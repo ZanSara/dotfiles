@@ -4,4 +4,4 @@ configuration {
   show-icons:         true;
   icon-theme:         "Qogir";
 }
-@import "/home/s/.config/rofi/themes/DarkBlack.rasi"
+@import "~/.config/rofi/themes/DarkBlack.rasi"

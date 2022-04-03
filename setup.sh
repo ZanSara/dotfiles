@@ -36,12 +36,18 @@ cd ~/.local/share
 ln -s ~/projects/dotfiles/.local/share/fonts .
 cd ~
 
-mkdir ~/documents
-mkdir ~/documents/audio
-mkdir ~/documents/images
-mkdir ~/documents/public
-mkdir ~/documents/templates
-mkdir ~/documents/video
-mkdir ~/downloads
+mkdir ~/files
+mkdir ~/files/audio
+mkdir ~/files/images
+mkdir ~/files/video
+mkdir ~/files/documents
+mkdir ~/files/downloads
+mkdir ~/projects
+mkdir ~/software
 
+xdg-user-dirs-update --set DOWNLOAD ~/files/downloads/
+xdg-user-dirs-update --set DOCUMENTS ~/files/documents/
+xdg-user-dirs-update --set IMAGES ~/files/images/
+xdg-user-dirs-update --set MUSIC ~/files/audio/
+xdg-user-dirs-update --set VIDEO ~/files/video/
 xdg-user-dirs-update

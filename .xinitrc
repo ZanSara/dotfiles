@@ -49,7 +49,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 
-xset +fp /home/sara/.local/share/fonts
+xset +fp /home/$USER/.local/share/fonts
 xset fp rehash
 
 exec i3

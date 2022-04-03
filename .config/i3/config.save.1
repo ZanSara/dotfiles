@@ -51,7 +51,7 @@ bindsym $mod+d exec exec rofi -show drun
 # quickstart applications
 bindsym $mod+b exec firefox
 bindsym $mod+g exec caja
-bindsym $mod+f exec kitty -e ranger
+bindsym $mod+f exec ranger
 bindsym $mod+c exec code
 
 # change focus
@@ -356,8 +356,13 @@ exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l dim"
 exec --no-startup-id xset dpms 500
 #exec --no-startup-id dunstwal
 exec_always --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
-#exec slack
-#exec firefox
+exec slack
+exec firefox
+
+
+# Start double-monitor display
+exec setup-double-monitors
+
 
 # Set keyboard layout
 exec_always --no-startup-id setxkbmap us
@@ -366,4 +371,4 @@ exec_always --no-startup-id setxkbmap us
 exec xset b off
 
 # Start the animated background
-exec_always --no-startup-id /usr/libexec/xscreensaver/grav -root -delay 50000 -ncolors 2
+exec_always --no-startup-id /usr/libexec/xscreensaver/grav -root

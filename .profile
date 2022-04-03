@@ -26,4 +26,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# For Polybar
+export WIRELESS_INTERFACE=`ip route | grep '^default' | awk '{print $5}' | head -n1`
+export WIRED_INTERFACE=`ip route | grep '^default' | awk '{print $5}' | head -n1`
+
 export GTK_THEME=Adwaita:dark

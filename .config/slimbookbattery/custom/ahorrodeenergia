@@ -78,7 +78,7 @@ TLP_PERSISTENT_DEFAULT=0
 # Default: <none>
 
 CPU_SCALING_GOVERNOR_ON_AC=
-CPU_SCALING_GOVERNOR_ON_BAT=
+CPU_SCALING_GOVERNOR_ON_BAT=powersave
 #slimbook (2 lines)
 
 # Set the min/max frequency available for the scaling governor.
@@ -103,14 +103,14 @@ CPU_SCALING_MAX_FREQ_ON_BAT=1100000
 # - When HWP.EPP is available, EPB is not set
 # Default: balance_performance (AC), balance_power (BAT)
 
-#CPU_ENERGY_PERF_POLICY_ON_AC=balance_performance
+ENERGY_PERF_POLICY_ON_AC=balance-performance
 #CPU_ENERGY_PERF_POLICY_ON_BAT=balance_power
 
-ENERGY_PERF_POLICY_ON_AC=balance_power
+ENERGY_PERF_POLICY_ON_AC=balance-performance
 ENERGY_PERF_POLICY_ON_BAT=power
 #slimbook (2 lines)
 
-CPU_HWP_ON_AC=balance_power
+CPU_HWP_ON_AC=balance_performance
 CPU_HWP_ON_BAT=power
 #slimbook (2 lines)
 
@@ -121,7 +121,7 @@ CPU_HWP_ON_BAT=power
 # Default: <none>
 
 CPU_MIN_PERF_ON_AC=0
-CPU_MAX_PERF_ON_AC=50
+CPU_MAX_PERF_ON_AC=100
 CPU_MIN_PERF_ON_BAT=0
 CPU_MAX_PERF_ON_BAT=33
 #slimbook (4 lines)
@@ -266,7 +266,7 @@ INTEL_GPU_BOOST_FREQ_ON_BAT=900
 # Default: default
 
 RADEON_POWER_PROFILE_ON_AC=mid
-RADEON_POWER_PROFILE_ON_BAT=mid
+RADEON_POWER_PROFILE_ON_BAT=low
 #slimbook (2 lines)
 
 # Radeon dynamic power management method (DPM): battery, performance.
@@ -363,7 +363,7 @@ USB_AUTOSUSPEND=1
 # Note: input devices (usbhid) are excluded automatically
 # Default: <none>
 
-USB_BLACKLIST="0bda:0411 0bda:8153"
+USB_BLACKLIST=0bda:0411 0bda:8153
 #slimbook
 
 # Bluetooth devices are excluded from USB autosuspend:
@@ -420,7 +420,7 @@ RESTORE_DEVICE_STATE_ON_STARTUP=0
 # Separate multiple devices with spaces.
 # Default: <none>
 
-DEVICES_TO_DISABLE_ON_STARTUP=""
+DEVICES_TO_DISABLE_ON_STARTUP=bluetooth
 #slimbook
 
 # Radio devices to enable on startup: bluetooth, wifi, wwan.
@@ -455,7 +455,7 @@ DEVICES_TO_DISABLE_ON_STARTUP=""
 #   bluetooth, wifi, wwan.
 # Default: <none>
 
-DEVICES_TO_DISABLE_ON_BAT_NOT_IN_USE="bluetooth"
+DEVICES_TO_DISABLE_ON_BAT_NOT_IN_USE=bluetooth
 #slimbook
 
 # Battery charge thresholds (ThinkPad only).
@@ -497,7 +497,7 @@ DEVICES_TO_DISABLE_ON_BAT_NOT_IN_USE="bluetooth"
 
 # Radio devices to disable on connect.
 
-DEVICES_TO_DISABLE_ON_LAN_CONNECT=""
+DEVICES_TO_DISABLE_ON_LAN_CONNECT=
 #slimbook
 
 #DEVICES_TO_DISABLE_ON_WIFI_CONNECT="wwan"
@@ -505,7 +505,7 @@ DEVICES_TO_DISABLE_ON_LAN_CONNECT=""
 
 # Radio devices to enable on disconnect.
 
-DEVICES_TO_ENABLE_ON_LAN_DISCONNECT=""
+DEVICES_TO_ENABLE_ON_LAN_DISCONNECT=
 #slimbook
 
 #DEVICES_TO_ENABLE_ON_WIFI_DISCONNECT=""

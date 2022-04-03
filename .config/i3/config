@@ -360,8 +360,8 @@ exec slack
 exec firefox
 
 
-# Start double-monitor display
-exec setup-double-monitors
+# Setup double monitors
+exec setup-desk
 
 
 # Set keyboard layout

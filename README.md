@@ -29,5 +29,6 @@
 Other packages needed: `sudo apt install git curl network-manager xsensors pulseaudio net-tools xscreensaver-data-extra`
 
 Notes: 
+- Animated gravity simulator in the background (from xscreensaver)
 - Autostarts Slack on screen 10
 - Mirrors the status bar on every connected display

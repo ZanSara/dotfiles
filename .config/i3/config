@@ -366,4 +366,5 @@ exec_always --no-startup-id setxkbmap us
 exec xset b off
 
 # Start the animated background
-exec --no-startup-id /usr/libexec/xscreensaver/grav -root -delay 50000 -ncolors 2
+exec --no-startup-id /usr/libexec/xscreensaver/grav -root -delay 50000 -ncolors 2 -no-trail
+

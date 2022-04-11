@@ -47,7 +47,7 @@ mkdir ~/software
 
 xdg-user-dirs-update --set DOWNLOAD ~/files/downloads/
 xdg-user-dirs-update --set DOCUMENTS ~/files/documents/
-xdg-user-dirs-update --set IMAGES ~/files/images/
+xdg-user-dirs-update --set PICTURESS ~/files/images/
 xdg-user-dirs-update --set MUSIC ~/files/audio/
-xdg-user-dirs-update --set VIDEO ~/files/video/
+xdg-user-dirs-update --set VIDEOS ~/files/video/
 xdg-user-dirs-update

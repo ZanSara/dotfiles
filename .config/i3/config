@@ -142,7 +142,8 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # open applications on specific workspaces
-assign [class="Slack"] $workspace9
+assign [class="Discord Updater"] $workspace9
+assign [class="discord"] $workspace9
 assign [class="Slack"] $workspace10
 #assign [class="kitty"] $workspace1
 

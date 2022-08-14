@@ -142,6 +142,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # open applications on specific workspaces
+assign [class="Slack"] $workspace9
 assign [class="Slack"] $workspace10
 #assign [class="kitty"] $workspace1
 
@@ -358,6 +359,7 @@ exec --no-startup-id xset dpms 500
 exec_always --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec slack
 exec firefox
+exec discord
 
 # Set keyboard layout
 exec_always --no-startup-id setxkbmap us

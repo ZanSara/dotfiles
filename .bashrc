@@ -161,8 +161,7 @@ alias ssh="kitty +kitten ssh"
 
 # Double monitor config
 alias setup-edp="xrandr --output eDP --primary --auto"
-alias setup-desk="xrandr --output DisplayPort-0 --primary --auto --output DisplayPort-2 --auto --right-of DisplayPort-0 --output eDP --auto --right-of DisplayPort-2"
-alias setup-tv="xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 60.00 --output eDP --mode 1920x1080 --rate 60.00 --right-of HDMI-A-0"
+alias setup-desk="xrandr --output eDP --auto --output DisplayPort-2 --primary --auto --right-of eDP --output DisplayPort-1 --auto --right-of DisplayPort-2"
 
 # Disable terminal bell
 bind 'set bell-style none'

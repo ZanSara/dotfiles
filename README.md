@@ -13,7 +13,7 @@
 * Boot manager: **grub**, themed (https://www.gnu.org/software/grub/)
 * Font: **Terminus** (Original: http://terminus-font.sourceforge.net/, TTF: https://files.ax86.net/terminus-ttf/)
 * Terminal: **Kitty** (https://sw.kovidgoyal.net/kitty/) `sudo apt install kitty`
-* Shell: **bash**, themed (https://ohmybash.nntoan.com/) with customized "font" theme 
+* Shell: **bash**, themed (https://ohmybash.nntoan.com/) with customized "font" theme  --> ohb install script in the link
 * File manager: **ranger** (https://wiki.archlinux.org/title/Ranger) `sudo apt install ranger`
 * Web Browser: **Firefox** (https://www.mozilla.org/en-US/firefox/new/) `sudo apt install firefox`
 * Other utils to be installed:

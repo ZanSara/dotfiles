@@ -1,5 +1,4 @@
 @theme "/themes/appsmenu"
-
 mainbox {
 	margin: 40% 40%;
 	children: [ message, listview ];

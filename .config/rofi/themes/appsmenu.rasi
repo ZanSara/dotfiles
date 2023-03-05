@@ -1,149 +1,232 @@
-configuration {
-	/* Override config */
-	modi: "drun,window,system:~/.config/rofi/scripts/powermenu.sh";
-	scroll-method: 0;
-	window-format: "{c} {t}";
-}
-
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 1.7.1
+ **/
 * {
-  transparency: "real";
-background-color: transparent;
- /* background-color: #2f343f; */
-  window-border: #676E7D;
-  foreground: #eeeeee;
-  selected-normal-background: #5294e290;  
-  spacing: 0;
-  text:       #dfdfdf;
-  text-alt:   #b2b2b2;
-  font: "Monospace";
-  text-color: @text;
+    alternate-urgent-background: var(lightbg);
+    alternate-active-foreground: var(blue);
+    text-alt:                    rgba ( 178, 178, 178, 100 % );
+    selected-active-background:  var(blue);
+    selected-urgent-foreground:  var(background);
+    normal-foreground:           var(foreground);
+    text-color:                  var(text);
+    background:                  rgba ( 253, 246, 227, 100 % );
+    text:                        rgba ( 223, 223, 223, 100 % );
+    alternate-normal-foreground: var(foreground);
+    urgent-foreground:           var(red);
+    active-background:           var(background);
+    selected-normal-background:  rgba ( 82, 148, 226, 56 % );
+    window-border:               rgba ( 103, 110, 125, 100 % );
+    alternate-urgent-foreground: var(red);
+    selected-active-foreground:  var(background);
+    blue:                        rgba ( 38, 139, 210, 100 % );
+    separatorcolor:              var(foreground);
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    selected-urgent-background:  var(red);
+    alternate-active-background: var(lightbg);
+    spacing:                     0;
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    red:                         rgba ( 220, 50, 47, 100 % );
+    background-color:            transparent;
+    normal-background:           var(background);
+    border-color:                var(foreground);
+    foreground:                  rgba ( 238, 238, 238, 100 % );
+    transparency:                "real";
+    alternate-normal-background: var(lightbg);
+    urgent-background:           var(background);
+    selected-normal-foreground:  var(lightbg);
+    active-foreground:           var(blue);
+    font:                        "Monospace";
 }
-
-window {
-        background-color: rgba(0, 0, 0, 60%);
-	width: 100%;
-	height: 100%;
-	fullscreen: false;
-	position: center;
-	anchor: center;
-	font: "Monospace 13";
-}
-
-mainbox {
-	margin: 15% 25%;
-	children: [ inputbar, message, listview, wrapper-prompt ];
-}
-
-inputbar {
-	margin: 0 0 3em 0;
-	font: "Monospace 17";
-	children: [ icon-search, entry, case-indicator];
-}
-
-icon-search {
-	expand: false;
-	size: 25;
-	filename: "edit-find-symbolic";
-}
-
-entry {
-	expand: true;
-	font: inherit;
-	margin: 0 1em;
-}
-
-case-indicator {
-	font: inherit;
-}
-
-message {
-	text-color: @foreground;
-}
-
-listview {
-	expand: true;
-	layout: vertical;
-	columns: 3;
-	lines: 4;
-	cycle: true;
-	spacing: 0.3em;
-	scrollbar: false;
-}
-
-/* Elements */
 element {
-	orientation: vertical;
-	padding: 1em;
+    padding:     0 ;
+    orientation: vertical;
+    cursor:      pointer;
+    spacing:     5px ;
+    border:      0;
 }
-
-element-icon {
-	size: 64;
+element normal.normal {
+    background-color: var(background);
+    text-color:       var(foreground);
 }
-
-element-text {
-	expand: true;
-	horizontal-align: 0.5;
+element normal.urgent {
+    background-color: var(urgent-background);
+    text-color:       var(urgency);
 }
-
+element normal.active {
+    background-color: var(active-background);
+    text-color:       var(secondary);
+}
 element selected {
-	background-color: @background;
-	border: 1px;
-	border-radius: 0.5em;
-}
-
-/* Element normal */
-element normal.normal, element alternate.normal {
-	background-color: @background;
-	text-color: @foreground;
+    background-color: var(background);
+    border:           1px ;
+    border-radius:    1em ;
 }
 element selected.normal {
-	border-color: @foreground;
-	text-color: @foreground;
-}
-
-/* Element active */
-element normal.active, element alternate.active {
-	text-color: @secondary;
-}
-element selected.active {
-	border-color: @secondary;
-	text-color: @secondary;
-}
-
-/* Element urgent */
-element normal.urgent, element alternate.urgent {
-	text-color: @urgency;
+    background-color: var(selected-normal-background);
+    border-color:     var(foreground);
+    text-color:       var(foreground);
 }
 element selected.urgent {
-	border-color: @urgency;
-	text-color: @urgency;
+    background-color: var(selected-urgent-background);
+    border-color:     var(urgency);
+    text-color:       var(urgency);
 }
-
-wrapper-prompt {
-	expand: false;
-	orientation: horizontal;
-	children: [ dummy, mode-switcher ];
+element selected.active {
+    background-color: var(selected-active-background);
+    border-color:     var(secondary);
+    text-color:       var(secondary);
 }
-
-dummy {
-	expand: true;
+element alternate.normal {
+    background-color: var(background);
+    text-color:       var(foreground);
 }
-
-mode-switcher {
-	expand: false;
+element alternate.urgent {
+    background-color: var(alternate-urgent-background);
+    text-color:       var(urgency);
 }
-
+element alternate.active {
+    background-color: var(alternate-active-background);
+    text-color:       var(secondary);
+}
+element-text {
+    horizontal-align: 0.50;
+    background-color: transparent;
+    cursor:           inherit;
+    highlight:        inherit;
+    expand:           true;
+    text-color:       inherit;
+}
+element-icon {
+    background-color: transparent;
+    size:             64;
+    cursor:           inherit;
+    text-color:       inherit;
+}
+window {
+    padding:          5;
+    width:            50% ;
+    position:         center;
+    anchor:           center;
+    background-color: Black/60%;
+    height:           50% ;
+    font:             "Monospace 13";
+    border:           1;
+    fullscreen:       false;
+}
+mainbox {
+    padding:  0;
+    margin:   0;
+    border:   0;
+    children: [ inputbar,message,listview,wrapper-prompt ];
+}
+message {
+    padding:      1px ;
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+    text-color:   var(foreground);
+}
+textbox {
+    text-color: var(foreground);
+}
+listview {
+    layout:       vertical;
+    fixed-height: 0;
+    padding:      2px 0px 0px ;
+    scrollbar:    false;
+    cycle:        true;
+    lines:        4;
+    columns:      3;
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+    expand:       true;
+    spacing:      0;
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+    handle-color: var(normal-foreground);
+}
+sidebar {
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+}
 button {
-	width: 6em;
-	padding: 0.2em 0;
-	margin: 0 0.5em;
+    width:      20% ;
+    padding:    0;
+    cursor:     pointer;
+    margin:     0px  1em ;
+    spacing:    0;
+    text-color: var(normal-foreground);
 }
-
 button selected {
-	border: 0 0 1px 0;
-	border-color: @primary;
+    background-color: var(selected-normal-background);
+    border-color:     var(primary);
+    text-color:       var(selected-normal-foreground);
+    border:           0px 0px 1px ;
 }
-
+num-filtered-rows {
+    expand:     false;
+    text-color: Gray;
+}
+num-rows {
+    expand:     false;
+    text-color: Gray;
+}
+textbox-num-sep {
+    expand:     false;
+    str:        "/";
+    text-color: Gray;
+}
+inputbar {
+    padding:    1px ;
+    margin:     0px 0px 1em ;
+    font:       "Monospace 17";
+    spacing:    0px ;
+    text-color: var(normal-foreground);
+    children:   [ icon-search,entry,case-indicator ];
+}
+case-indicator {
+    font:       inherit;
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+entry {
+    text-color:        var(normal-foreground);
+    cursor:            text;
+    margin:            0px  1em ;
+    font:              inherit;
+    placeholder-color: Gray;
+    expand:            true;
+    spacing:           0;
+    placeholder:       "Type to filter";
+}
 prompt {
-	highlight: italic;
+    highlight:  italic ;
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+textbox-prompt-colon {
+    margin:     0px  1em  1em  1em ;
+    expand:     false;
+    str:        ":";
+    text-color: inherit;
+}
+icon-search {
+    size:     25;
+    expand:   false;
+    filename: "edit-find-symbolic";
+}
+wrapper-prompt {
+    orientation: horizontal;
+    expand:      false;
+    children:    [ dummy,mode-switcher ];
+}
+dummy {
+    expand: true;
+}
+mode-switcher {
+    expand: false;
 }

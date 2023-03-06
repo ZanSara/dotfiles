@@ -32,4 +32,8 @@ Notes:
 - Animated n-body simulator in the background (from xscreensaver)
 - Autostarts Discord on screen 9 and Slack on screen 10
 - Mirrors the status bar on every connected display
-- Last time the command looked like: `sudo apt install git rofi dunst polybar xscreensaver xscreensaver-data-extra kitty ranger network-manager acpi pulseaudio curl xsensors net-tools caja gimp gthumb autoconf build-essential gcc libpam0g-dev libxcb-xkb-dev autotools-dev binutils libc6-dev libx11-dev libxcomposite-dev libxext-dev libxfixes-dev libxft-dev libxmuu-dev libxrandr-dev libxss-dev pkg-config x11proto-core-dev wget libreoffice brightnessctl i3`, then don't forget vscode.
+- Last time the command looked like: `sudo apt install git rofi dunst polybar xscreensaver xscreensaver-data-extra kitty ranger network-manager acpi pulseaudio curl xsensors net-tools caja gimp gthumb autoconf build-essential gcc libpam0g-dev libxcb-xkb-dev autotools-dev binutils libc6-dev libx11-dev libxcomposite-dev libxext-dev libxfixes-dev libxft-dev libxmuu-dev libxrandr-dev libxss-dev pkg-config x11proto-core-dev wget libreoffice brightnessctl i3`.
+- Other software to remember aboout:
+   - VSCode
+   - Docker
+   - `ffmpeg libsndfile1 python3.10-dev python3-venv`

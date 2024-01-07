@@ -61,7 +61,7 @@ export OSH=/home/$USER/.oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="font-altered"
+OSH_THEME="font"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -165,4 +165,7 @@ alias setup-desk="xrandr --output eDP --auto --output DisplayPort-2 --primary --
 
 # Disable terminal bell
 bind 'set bell-style none'
+
+# Export Android tools to PATH
+export PATH=$PATH:/home/s/Android/Sdk/cmdline-tools/latest
 

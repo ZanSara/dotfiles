@@ -316,8 +316,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 #bindsym XF86AudioPrev exec mpc prev
 
 # Brighness
-bindsym XF86MonBrightnessUp exec brightnessctl s 1%+
-bindsym XF86MonBrightnessDown exec brightnessctl s 1%-
+bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 
 # screenshot
 bindsym --release Print exec scrot $HOME/documents/images/`date +%Y-%m-%d_%H:%M:%S`.png
@@ -339,28 +339,28 @@ gaps top 40
 
 
 # shut down, restart and locking features
-bindsym $mod+Delete exec rofi -modi system:$HOME/.config/rofi/scripts/rofi-power-menu
+bindsym $mod+Delete exec rofi -modi system:$HOME/.config/rofi/scripts/powermenu.sh -show system -theme themes/system-menu
 bindsym $mod+l exec xsecurelock
 
 # Autolock setup
-#exec_always --no-startup-id xautolock -time 2 -notify 1 -bell 0% -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -locker xsecurelock
 exec xset s 300 30
-exec xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
+exec xss-lock -n /usr/share/doc/xss-lock/dim-screen.sh -l -- xsecurelock
+exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l dim"
+exec --no-startup-id xset dpms 500
 
 
+#exec_always --no-startup-id xautolock -time 2 -notify 1 -bell 0% -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -locker xsecurelock
 # screensetup
 #exec_always --no-startup-id xrandr --output DisplayPort-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-0 --off --output DVI-1 --off
 
 # autostarted applications
 #exec --no-startup-id .config/conky/start_conky
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l dim"
-exec --no-startup-id xset dpms 500
 #exec --no-startup-id dunstwal
 exec_always --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
-exec slack
 exec firefox
-exec discord
+#exec slack
+#exec discord
 
 # Set keyboard layout
 exec_always --no-startup-id setxkbmap us
